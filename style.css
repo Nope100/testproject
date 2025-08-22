@@ -1,0 +1,93 @@
+body {
+    background: linear-gradient(180deg, #f5aaa0, #ebb472, #ffc15e);
+    font-family: 'Pixelify Sans', monospace;
+    color: #1f1300;
+    text-align: center;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #1f1300;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+
+  }
+  
+  #img_div {
+    text-align: center; /* centers the image horizontally */
+    margin-top: 20px;
+  }
+  
+  #Pompourin-3 {
+    width: 300px; /* scale image */
+    border: 4px solid #1f1300;
+    image-rendering: pixelated;
+    text-align: center;
+  }
+
+  #game {
+    position: relative;
+    width: 300px;       /* match your base body width */
+    height: 400px;      /* match your base body height */
+    margin: 20px auto;  /* top/bottom 20px, left/right auto centers it */
+  }
+  
+  #game img {
+    position: absolute;
+    top: 0;
+    left: 50%;                  /* start horizontally at center */
+    transform: translateX(-50%); /* shift left by half image width */
+    width: 100%;                /* scale to div width */
+    image-rendering: pixelated; /* keep blocky look */
+  }
+
+  #controls {
+    margin-top: 20px;  /* space between game and buttons */
+    text-align: center; /* center the buttons */
+  }
+  
+  #controls button {
+    font-family: 'Pixelify Sans', monospace;
+    font-size: 14px;
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  #game {
+    position: relative;
+    width: 300px;
+    height: 400px;  /* match your base body image height */
+    margin: auto;
+  }
+
+/* Stars layer */
+#stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* so buttons remain clickable */
+    z-index: -1;
+  
+    /* Multiple star layers with different sizes */
+    background:
+      radial-gradient(white 3px, transparent 3px),
+      radial-gradient(white 2px, transparent 2px),
+      radial-gradient(white 1px, transparent 1px);
+  
+    background-size: 60px 60px, 90px 90px, 120px 120px;
+    background-position: 10px 20px, 30px 50px, 0 0;
+  
+    /* Twinkle animation */
+    animation: twinkle 2s infinite alternate;
+  }
+  
+  /* Twinkle effect */
+  @keyframes twinkle {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+  }
